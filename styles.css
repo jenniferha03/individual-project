@@ -1,77 +1,90 @@
 @charset "UTF-8";
 /* CSS Document */
-header {
-    color: #26422A;
-	background-color: #201f1f;
-    text-align: center;
-    padding: 100px;
-}
-
+/*
+Black: #0D0D0D
+Gray: #262626
+White: #F2F2F2
+Gold: #D99E32
+*/
 nav {
     margin: 0;
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	color: #000;
+	background-color: #0D0D0D;
 	width: 100%;
-/*	position: fixed;*/
+	position: fixed;
 }
-
 .nav {
 	list-style-type: none;
-	/* margin: 0px;
-	padding: 0; */
+	margin: 0;
+	padding: 0; 
 	overflow: 0;
 	top: 0;
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	width: 110vw;
 	position: fixed;
-	background-color: #201f1f;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	background-color: #0D0D0D;
 }
-
 .nav li {
 	float: left;
 }
-
 .nav li a {
 	display: block;
-	color: #ffffff;
+	color: #F2F2F2;
 	font-size: larger;
-	font-weight: bolder;
+	font-weight:500;
 	text-align: center;
-	padding: 20px 30px; 
+	padding: 30px 30px; 
 	text-decoration: none;
 }
-
-.nav li a:hover {
-	color: #D97C0B;
-}
-	
+.nav li a:hover:not(.active) {
+	color: #F2F2F2;
+	text-decoration: underline; /* Use text-decoration instead of border */
+    text-decoration-thickness: 2px; /* Adjust the thickness of the underline */
+    text-underline-offset: 10px; /* Adjust the distance between text and underline */
+}	
 .nav .active {
-	color: #bb1c1c;
-	background-color: #EAA7C3;
+	color: #D99E32;
+}
+header {
+	background-color: #0D0D0D;
+    text-align: center;
+    padding: 1% 0 0 0;
 }
 .head-photo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
-
+h1 {
+	font-family: 'Playfair Display', serif;
+	color: #D99E32;
+}
 h2 {
-    color: #ffffff7b;
+	font-family: 'Playfair Display', serif;
+    color: #F2F2F27b;
+}
+h3 {
+	font-family: 'Playfair Display', sans-serif;
+	font-weight: 700;
 }
 p{
-	color: #fffffff4;
+	color: #F2F2F2;
+	font-family: 'Montserrat', sans-serif;
 	line-height: 2em;
 	font-size: 1.1rem;
 }
-
 body {
-    font-family: 'Georgia', sans-serif;
-	color: #fffffff4;
+	background-color: #0D0D0D; 
     margin: 0;
     padding: 0;
 }
@@ -79,66 +92,58 @@ img{
 	max-width: 100%;
 	max-height: 75%;
 }
-
-/* section{
- } */
 button {
-	margin-left: 40%;
+	margin-left: 0%;
 	width: 10em;
 	padding: 10px 20px;
 	font-size: 16px;
-	font-family: 'Georgia', sans-serif;
-	background-color: #ffffff;
-	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	background-color: #D99E32;
+	color: #0D0D0D;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer; 
 }
-
 button:hover {
-	background-color: #D97C0B;
-	color: #ffffff;
+	color: #0D0D0D;
+	background-color: #F2F2F2;
 }
-
 .project {
     margin-bottom: 20px;
 }
 
+
 .container {
 	display: flex;
-	align-items: center;
+	align-items:center;
 	justify-content: space-around;
-	height: 75vh;
-	color: white;
+	height: 95vh;
+	color: #F2F2F2;
 	overflow: hidden;
 }
-
 .portfolio-image {
 	width: 20rem;
 	height: 20rem;
-	object-fit: cover; 
+	object-fit: cover;
 	object-position: center bottom; 
 	display: block;
 	border-radius: 50%;
 }
-
 .container-right {
 	width: 50%;
 	text-align: left;
-	padding: 20px;
+	padding: 30px;
 }
-
-.boxes 
-{
+.boxes {
 	display: flex;
 	justify-content: space-around;
 	position: absolute;
-	top: 170%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 90%;
 }
-
 .box {
     flex: 1;
     margin: 10px;
@@ -146,35 +151,32 @@ button:hover {
     position: relative;
     height: 40em;
 }
-
 .box img {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.4s ease;
 }
-
 .box::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(200, 200, 200, 0.4);
+    height: 75%;
+    background-color: rgba(30, 30, 30, 0.4);
     z-index: 1;
     transition: background-color 0.4s ease; 
 }
-
 .box:hover::before {
     background-color: rgba(255, 255, 255, 0); 
 }
-
 .box h3 {
-	color:#ffffff;
+	color:#F2F2F2;
 	position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: 0;
 	font-size: 2em;
+	z-index: 2; 
 }
