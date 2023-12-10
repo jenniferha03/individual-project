@@ -6,6 +6,23 @@ Gray: #262626
 White: #F2F2F2
 Gold: #D99E32
 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+	z-index: 99;
+}
+
+#header-image{
+	width: 7.5em;
+	height: auto;
+	z-index: 100;
+	padding-left: 5%;
+	position: fixed;
+}
+
+
 nav {
     margin: 0;
 	text-align: center;
@@ -15,18 +32,19 @@ nav {
 	width: 100%;
 	position: fixed;
 	z-index: 99;
+	
 }
 .nav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0; 
 	overflow: 0;
+	position: fixed;
 	top: 0;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	width: 110vw;
-	position: fixed;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
 	background-color: #0D0D0D;
@@ -293,5 +311,3 @@ button:hover {
 	color:#D99E32;
 	transform: scale(1.01);
 }
-
-  
